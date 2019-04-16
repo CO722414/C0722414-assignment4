@@ -82,6 +82,31 @@ namespace C0722414_Assignment_4
 
         }
 
+        public void ProcessArrayList1()
+        {
+            int LineNumber = 0;
+            foreach (var line in Beowulf)
+
+            {
+
+                if (ContainWord(line.ToString().ToLower(), "sea") && ContainWord(line.ToString().ToLower(), "fare"))
+                {
+                    Console.WriteLine(line);
+                    Console.WriteLine("Line number is {0}", LineNumber);
+                    LineNumber++;
+                }
+            }
+            Console.WriteLine(LineNumber);
+        }
+
+        public bool ContainWord(string line, string Word)
+        {
+            if (line.Contains(Word) == true)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
 
