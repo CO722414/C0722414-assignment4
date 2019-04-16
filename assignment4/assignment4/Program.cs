@@ -19,7 +19,7 @@ namespace C0730108_Assignment_4
             p.Beowulf = new ArrayList();
 
         }
-        public void Run() { this.ReadTextFiles(); }
+        public void Run() { this.ReadTextFiles(); }  
 
         public void ReadTextFiles()
         {
