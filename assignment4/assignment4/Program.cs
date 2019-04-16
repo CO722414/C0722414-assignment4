@@ -62,6 +62,26 @@ namespace C0722414_Assignment_4
             return countletters;
         }
 
+        public int FindNumberOfWords(string x)
+        {
+            int result = 0;
+
+            x = x.Trim();
+
+            if (x == "")
+                return 0;
+            
+            while (x.Contains("  "))
+                x = x.Replace("  ", " ");
+
+            foreach (string y in x.Split(' '))
+                result++;
+
+            Console.WriteLine("Result is " + result);
+            return result;
+
+        }
+
     }
 }
 
