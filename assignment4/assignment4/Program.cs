@@ -39,6 +39,29 @@ namespace C0722414_Assignment_4
 
         }
 
+        public int FindNumberOfBlankSpaces(string line)
+        {
+            int countletters = 0;
+            int countSpaces = 0;
+
+            foreach (char c in line)
+            {
+                if (char.IsLetter(c))
+                {
+                    countletters++;
+                }
+                if (char.IsWhiteSpace(c))
+                {
+                    countSpaces++;
+
+                }
+
+            }
+            Console.WriteLine("Number of Blank Spaces: " + countSpaces);
+            Console.WriteLine("Number of letters: " + countletters);
+            return countletters;
+        }
+
     }
 }
 
