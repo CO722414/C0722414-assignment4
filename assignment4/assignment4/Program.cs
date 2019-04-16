@@ -22,7 +22,7 @@ namespace C0722414_Assignment_4
             p.ProcessArrayList();
             p.ProcessArrayList1();
             p.FindNumberOfWords(text);
-        
+            p.AverageNumberOfLetters(text);
 
         }
 
@@ -99,7 +99,13 @@ namespace C0722414_Assignment_4
 
         }
 
-      
+        public double AverageNumberOfLetters(string text)
+        {
+
+            double average = ((text.Length - FindNumberOfBlankSpaces(text)) / (float)FindNumberOfWords(text));
+            Console.WriteLine("Average is " + average);
+            return average;
+        }
 
         public void ProcessArrayList()
         {
@@ -125,7 +131,7 @@ namespace C0722414_Assignment_4
 
             {
 
-                if (!ContainWord(line.ToString().ToLower(), "war") && ContainWord(line.ToString().ToLower(), "fare"))
+                if (!ContainWord(line.ToString().ToLower(), "ware") && ContainWord(line.ToString().ToLower(), "fare"))
                 {
                     Console.WriteLine(line);
                     Console.WriteLine("Line number is {0}", LineNumber);
